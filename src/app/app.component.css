@@ -1,0 +1,35 @@
+.container {
+    padding-top: 120px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.bton {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btoff {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}

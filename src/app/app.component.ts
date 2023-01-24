@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ArduinoService } from './services/arduino.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project-arduino';
+  public isOnOff: boolean = false;
+
+  constructor(private service: ArduinoService) {}
+
+  onOff() {
+    this.isOnOff = !this.isOnOff
+
+    // if(this.isOnOff  == true){
+    //   this.isOnOff  = false
+    // }else{
+    //   this.isOnOff  = true
+    // }
+
+    this.service.getOn(this.isOnOff ).subscribe(res => {
+      console.log(res)
+    });
+  }
+
+  
 }
